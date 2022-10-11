@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <robot name="robot_model_core">
-
+  
+  <!-- Base Link -->
   <link name="base_link">
     <inertial>
       <origin xyz="-9.7145E-17 -5.5511E-17 -0.019853" rpy="0 0 0" />
@@ -32,7 +33,9 @@
       </geometry>
     </collision>
   </link>
-
+  
+  
+  <!-- Left Wheel Link -->
   <link name="left_wheel_link">
     <inertial>
       <origin xyz="6.1062E-16 0.013537 0" rpy="0 0 0" />
@@ -63,7 +66,8 @@
       </geometry>
     </collision>
   </link>
-
+  
+  <!-- Left Wheel Joint -->
   <joint name="left_wheel_joint" type="continuous">
     <origin xyz="0 -0.1527 -0.035" rpy="0 0 0" />
     <parent link="base_link" />
@@ -71,7 +75,9 @@
     <axis xyz="0 -1 0" />
     <limit effort="1" velocity="1" />
   </joint>
-
+  
+  
+  <!-- Right Wheel Link -->
   <link name="right_wheel_link">
     <inertial>
       <origin xyz="1.6653E-16 -0.013537 -2.7756E-17" rpy="0 0 0" />
@@ -102,7 +108,8 @@
       </geometry>
     </collision>
   </link>
-
+  
+  <!-- Right Wheel Joint -->
   <joint name="right_wheel_joint" type="continuous">
     <origin xyz="0 0.1527 -0.035" rpy="0 0 0" />
     <parent link="base_link" />
@@ -112,7 +119,7 @@
   </joint>
 
 
-  <!-- FL -->
+  <!-- Front Left Caster Link -->
   <link name="fl_caster_link">
     <inertial>
       <origin xyz="2.7756E-17 0.0125 0" rpy="0 0 0" />
@@ -143,7 +150,8 @@
       </geometry>
     </collision>
   </link>
-
+  
+  <!-- Front Left Caster Joint -->
   <joint name="fl_caster_joint" type="continuous">
     <origin xyz="0.095 -0.09 -0.0735" rpy="0 0 0" />
     <parent link="base_link" />
@@ -153,7 +161,7 @@
   </joint>
 
 
-
+  <!-- Front Right Caster Link -->
   <link name="fr_caster_link">
     <inertial>
       <origin xyz="2.7756E-17 0.0125 0" rpy="0 0 0" />
@@ -184,7 +192,8 @@
       </geometry>
     </collision>
   </link>
-
+  
+  <!-- Front Right Caster Link -->
   <joint name="fr_caster_joint" type="continuous">
     <origin xyz="0.095 0.09 -0.0735" rpy="0 0 0" />
     <parent link="base_link" />
@@ -192,7 +201,9 @@
     <axis xyz="0 -1 0" />
     <limit effort="1" velocity="1" />
   </joint>
-
+  
+  
+  <!-- Rear Left Caster Link -->
   <link name="rl_caster_link">
     <inertial>
       <origin xyz="1.648E-17 0.0125 0" rpy="0 0 0" />
@@ -223,7 +234,8 @@
       </geometry>
     </collision>
   </link>
-
+  
+  <!-- Rear Left Caster Joint -->
   <joint name="rl_caster_joint" type="continuous">
     <origin xyz="-0.095 -0.09 -0.0735" rpy="0 0 0" />
     <parent link="base_link" />
@@ -231,7 +243,9 @@
     <axis xyz="0 -1 0" />
     <limit effort="1" velocity="1" />
   </joint>
-
+  
+  
+  <!-- Rear Right Caster Link -->
   <link name="rr_caster_link">
     <inertial>
       <origin xyz="-1.8215E-17 -0.0125 0" rpy="0 0 0" />
@@ -262,7 +276,8 @@
       </geometry>
     </collision>
   </link>
-
+  
+  <!-- Rear Right Caster Joint -->
   <joint name="rr_caster_joint" type="continuous">
     <origin xyz="-0.095 0.09 -0.0735" rpy="0 0 0" />
     <parent link="base_link" />
@@ -270,7 +285,9 @@
     <axis xyz="0 -1 0" />
     <limit effort="1" velocity="1" />
   </joint>
-
+  
+  
+  <!-- Camera Base Link -->
   <link name="cam_base_link">
     <inertial>
       <origin xyz="-2.7756E-17 0 -0.0165" rpy="0 0 0" />
@@ -301,7 +318,8 @@
       </geometry>
     </collision>
   </link>
-
+  
+  <!-- Camera Base Joint -->
   <joint name="cam_base_joint" type="fixed">
     <origin xyz="0.13 0 0.033" rpy="0 0 0" />
     <parent link="base_link" />
