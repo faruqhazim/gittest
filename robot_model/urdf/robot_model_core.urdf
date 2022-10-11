@@ -98,8 +98,7 @@
     <collision>
       <origin xyz="0 0.0127 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robot_model/meshes/right_wheel_link.STL" />
+        <mesh filename="package://robot_model/meshes/right_wheel_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -130,8 +129,7 @@
     <visual>
       <origin xyz="0 -0.0125 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://robot_model/meshes/fl_caster_link.STL" />
+        <mesh filename="package://robot_model/meshes/fl_caster_link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.79216 0.81961 0.93333 1" />
